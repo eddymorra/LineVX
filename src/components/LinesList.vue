@@ -7,8 +7,11 @@
                 </div>
                 <div v-else>
                     <span>{{ line.name }}</span>
-                    <button v-on:click="editLine(line)" class="btn btn-warning">Edit</button>
-                    <button v-on:click="deleteLine(line.id)" class="btn btn-danger">Delete</button>
+                    <div class="buttonright">
+                        <button v-on:click="editLine(line)" class="btn btn-warning">Edit</button>
+                        <button v-on:click="deleteLine(line.id)" class="btn btn-danger">Delete</button>
+                    </div>
+                    <div class="clear"></div>
                 </div>
                 <hr>
             </li>
@@ -49,15 +52,26 @@
 </script>
 
 <style scoped>
+    .clear {
+        clear: both;
+    }
+
     ul li {
-        margin: 0;
+        margin-left: -36px;
+        list-style: none;
     }
 
     ul li span {
-        font-size: 20px;
+        float: left;
+        font-size: 16px;
+        margin-top: 8px;
     }
 
     input {
         margin-bottom: 10px;
+    }
+
+    .buttonright {
+        float: right;
     }
 </style>

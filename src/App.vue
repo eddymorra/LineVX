@@ -15,6 +15,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <!-- Injection du component SEARCH-LINE -->
                   <search-line></search-line>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">{{nblines()}} lines</a></li>
+            </ul>
                 
             </div>
           </div>
@@ -48,6 +52,11 @@
                 .then((response) => {
                     this.$store.dispatch('chargeState', response.data);
                 })
+        },
+        methods: {
+            nblines: function() {
+                return this.$store.state.lines.length
+            }
         }
     }
 </script>

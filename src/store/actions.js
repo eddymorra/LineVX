@@ -1,7 +1,6 @@
 export const actions = {
     chargeState: (context, payload) => {
         context.commit('CHARGE_STATE', payload);
-        console.log(payload);
     },
     addLine: (context, payload) => {
         context.commit('ADD_LINE', payload);
