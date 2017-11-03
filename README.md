@@ -1,6 +1,6 @@
-# vuetodolist
+# LineVX with VueJS and VueX
 
-> A Vue.js project
+> A Vue.js/VueX project
 
 ## Build Setup
 
